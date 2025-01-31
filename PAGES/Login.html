@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/styles_login.css" />
+    <!-- FUENTES. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Fecha Especial</title>
+  </head>
+  <body>
+    <form action="main.html" class="sombra animated fadeInUp">
+      <h1>Ingresa la fecha dónde todo esto comenzo. ❤️</h1>
+      <div class="grupo_div">
+        <label class="etiqueta">Formato de fecha: dd/mm/yy</label>
+        <br /><br />
+        <input type="text" class="regisFecha" placeholder="Fecha Especial" />
+      </div>
+      <br />
+      <input type="submit" name="confirm" class="enlace" />
+    </form>
+
+    <!-- Ventana Modal para mostrar el error -->
+    <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <p>Fecha incorrecta. Inténtalo de nuevo.</p>
+        <button id="closeModal">Cerrar</button>
+      </div>
+    </div>
+    <!-- Modal de error -->
+    <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <p>Fecha incorrecta. Inténtalo de nuevo.</p>
+        <button id="closeModal">Cerrar</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const inputFecha = document.querySelector(".regisFecha");
+        const modal = document.getElementById("errorModal");
+        const modalContent = document.querySelector(".modal-content");
+        const closeButton = document.getElementById("closeModal");
+
+        form.addEventListener("submit", function (event) {
+          if (inputFecha.value !== "17/06/24") {
+            event.preventDefault(); // Evita que el formulario se envíe
+            modal.style.display = "flex"; // Muestra la modal
+            setTimeout(() => {
+              modal.classList.add("show"); // Agrega la clase para animación
+            }, 10); // Pequeño retraso para que la transición se active correctamente
+          }
+        });
+
+        closeButton.addEventListener("click", function () {
+          modal.classList.remove("show"); // Quita la clase para animación
+          setTimeout(() => {
+            modal.style.display = "none"; // Oculta la modal después de la animación
+          }, 300);
+        });
+
+        // Cerrar la modal al hacer clic fuera de ella
+        window.addEventListener("click", function (event) {
+          if (event.target === modal) {
+            modal.classList.remove("show");
+            setTimeout(() => {
+              modal.style.display = "none";
+            }, 300);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

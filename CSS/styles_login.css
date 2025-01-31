@@ -1,0 +1,183 @@
+/* Globales. */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+  }
+  /* Scroll snap. */
+  .servicios,
+  .navegacion-principal,
+  .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  body {
+    font-size: 16px; /* 1rem = 10 px */
+    font-family: "Krub", sans-serif;
+    background-image: url(../IMGs/city_view.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: "Mouse Memoirs", serif;
+    font-weight: bold;
+    font-size: 5rem;
+    text-transform: uppercase;
+  }
+
+  /* Estilos para la ventana modal. */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    opacity: 0; /* Inicialmente oculta. */
+    transform: scale(0.8); /* Inicialmente más pequeña. */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Transición suave. */
+  }
+
+  .modal.show .modal-content {
+    opacity: 1; /* Hace visible la ventana modal. */
+    transform: scale(1); /* Regresa al tamaño normal. */
+  }
+
+  .modal button {
+    margin-top: 10px;
+    padding: 8px 15px;
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .modal button:hover {
+    background-color: #d63030;
+  }
+  /* Estilos para el Login. */
+  .sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
+    box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
+    border-radius: 1rem;
+    background-color: transparent;
+    backdrop-filter: blur(.4rem);
+    border: .1rem solid white;
+    padding: 5rem;
+    margin-top: 8rem;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    text-align: center;
+    color: white;
+    transition: 1s;
+  }
+  .sombra:hover {
+    transform: scale(1.07);
+  }
+
+  @-webkit-keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    transition: 1s;
+  }
+  .fadeInUp:hover {
+    transform: scale(1.07);
+  }
+  
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    transition: 1s;
+  }
+  .animated:hover {
+    transform: scale(1.07);
+  }
+
+  .regisFecha {
+    font-family: "Poppins", serif;
+    font-weight: 300;
+    border: .1rem solid black;
+    border-radius: 1rem;
+    padding: .8rem;
+    padding-left: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  
+  .enlace {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    color: white;
+    margin-top: 1rem;
+    background-color: #d81159;
+    border: .1rem solid black;
+    border-radius: .8rem;
+    padding: 2rem;
+    padding-top: .7rem;
+    padding-bottom: .7rem;
+    transition: 3s;
+  }
+  .enlace:hover {
+    background-color: #aa1155;
+  }
+  
+  .etiqueta {
+    font-family: "Poppins", serif;
+    font-weight: 500;
+    text-transform: uppercase;
+  }

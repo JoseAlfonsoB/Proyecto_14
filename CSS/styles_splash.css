@@ -1,0 +1,32 @@
+/* Estilo básico para el splash screen */
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #9d4edd; /* Fondo azul */
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    animation: fadeOut 12s forwards; /* Efecto de desvanecimiento */
+  }
+  h1 {
+    font-family: "Alkatra", serif;
+    font-weight: bold;
+    font-size: 50px;
+  }
+
+  .splash-container {
+    opacity: 1;
+    animation: fadeOut 12s forwards;
+  }
+
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

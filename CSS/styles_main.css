@@ -1,0 +1,60 @@
+/* Globales. */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+  }
+  /* Scroll snap. */
+  .servicios,
+  .navegacion-principal,
+  .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+body {
+    font-size: 16px; /* 1rem = 10 px*/
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    background-color: #deaaff;
+}
+.titulo {
+    font-size: 4rem;
+    font-weight: bold;
+    color: whitesmoke;
+    margin-bottom: 0rem;
+}
+
+.divisor {
+    border: .1rem solid white;
+    margin: 3rem;
+    margin-top: 1rem;
+}
+
+.seccion {
+    display: flex;
+    background-color: #edf67d;
+    height: 10vb;
+    margin: 3rem;
+    height: 20rem;
+    
+}
+.seccion {
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.cuadro {
+    background-color: #b3e9c7;
+    height:15rem;
+    width: 20rem;
+    margin: 3rem;
+    text-decoration: none;
+    color: white;
+}
