@@ -1,60 +1,99 @@
-/* Globales. */
+/* Globales */
 html {
     font-size: 62.5%;
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
-  }
-  /* Scroll snap. */
-  .servicios,
-  .navegacion-principal,
-  .formulario {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-  *,
-  *:before,
-  *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
+}
+
 body {
-    font-size: 16px; /* 1rem = 10 px*/
-    align-items: center;
+    font-size: 16px; /* 1rem = 10px */
     text-align: center;
     font-weight: bold;
     background-color: #deaaff;
+    margin: 0;
+    padding: 0;
 }
+
 .titulo {
     font-size: 4rem;
     font-weight: bold;
     color: whitesmoke;
-    margin-bottom: 0rem;
+    margin-bottom: 0;
 }
 
 .divisor {
-    border: .1rem solid white;
+    border: 0.1rem solid white;
     margin: 3rem;
     margin-top: 1rem;
 }
 
-.seccion {
+/* Estilos para móvil (mobile-first) */
+main {
     display: flex;
-    background-color: green;
-    height: 10vb;
-    margin: 3rem;
-    height: 20rem;
-    
-}
-.seccion {
-    display: flex;
-    text-align: center;
+    flex-direction: column;
     align-items: center;
+    padding: 1rem;
+}
+
+.seccion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
 }
 
 .cuadro {
     background-color: #b3e9c7;
-    height:15rem;
-    width: 20rem;
-    margin: 3rem;
+    width: 90%;
+    max-width: 30rem;
+    margin: 1rem 0;
+    padding: 2rem;
     text-decoration: none;
     color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cuadro h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.cuadro:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Media queries para pantallas más grandes */
+@media (min-width: 768px) {
+    .seccion {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .cuadro {
+        width: calc(50% - 2rem);
+        max-width: 25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .seccion {
+        gap: 3rem;
+    }
+
+    .cuadro {
+        width: calc(33.333% - 2rem);
+        max-width: 30rem;
+    }
 }
