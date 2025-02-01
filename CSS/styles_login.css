@@ -101,6 +101,16 @@ html {
     transform: scale(1.07);
   }
 
+  @media (max-width: 600px) {
+    .sombra {
+      width: auto;
+      margin: 2rem;
+    }
+    .regisFecha {
+      width: 20rem;
+    }
+  }
+
   @-webkit-keyframes fadeInUp {
     from {
       opacity: 0;
