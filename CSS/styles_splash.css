@@ -21,6 +21,11 @@ body {
     opacity: 1;
     animation: fadeOut 12s forwards;
   }
+  @media (max-width: 600px) {
+      .splash-container {
+        padding: 60px;
+      }
+  }
 
   @keyframes fadeOut {
     0% {
