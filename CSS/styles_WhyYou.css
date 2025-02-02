@@ -1,36 +1,38 @@
 /* Globales */
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; /* 1rem = 10px */
     box-sizing: border-box;
     scroll-snap-type: y mandatory;
-  }
-  
-  /* Scroll snap */
-  .servicios,
-  .navegacion-principal,
-  .formulario {
-    scroll-snap-align: center;
-    scroll-snap-stop: always;
-  }
-  
-  *,
-  *:before,
-  *:after {
+}
+
+*,
+*:before,
+*:after {
     box-sizing: inherit;
-  }
-  
-  body {
-    font-size: 16px; /* 1rem = 10px */
+}
+
+body {
+    font-size: 1.6rem; /* 16px */
     font-family: "Krub", sans-serif;
-    padding: 5rem;
+    margin: 0;
+    padding: 0;
+    background-color: #c8b1e4;
+    min-height: 100vh; /* Asegura que el body tenga al menos el alto de la ventana */
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #c8b1e4;
-    min-height: 100vh; /* Asegura que el body tenga al menos el alto de la ventana */
-  }
-  
-  .sombra {
+}
+
+/* Scroll snap */
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+/* Estilos base para móviles */
+.sombra {
     -webkit-box-shadow: 0px 5px 15px 0px #ced4da;
     -moz-box-shadow: 0px 5px 15px 0px #ced4da;
     box-shadow: 0px 5px 15px 0px #ced4da;
@@ -43,211 +45,166 @@ html {
     padding: 2rem; /* Reducir padding para móviles */
     margin: 1rem; /* Reducir margen para móviles */
     background-color: #fbfaff;
-  }
-  
-  .titulo {
+}
+
+.titulo {
     font-family: "Rubik Spray Paint", serif;
     font-weight: 400;
     color: #d4bbfc;
     font-size: 2.9rem; /* Tamaño de fuente más pequeño para móviles */
-  }
-  
-  .separador {
-    border-bottom: .2rem solid #ced4da;
+    text-align: center; /* Centrar el título */
+}
+
+.separador {
+    border-bottom: 0.2rem solid #ced4da;
     width: 100%; /* Ajuste para móviles */
-    margin: 0 auto; /* Centrar el separador */
-  }
-  
-  .parrafo {
+    margin: 1rem auto; /* Centrar el separador */
+}
+
+.parrafo {
     font-family: "Roboto Condensed", serif;
     font-optical-sizing: auto;
     font-weight: normal;
     font-style: normal;
-    margin: 1rem;
-    margin-bottom: 0rem;
+    margin: 1rem 0;
     font-size: 1.6rem;
-  }
-  .parr2 {
-    margin-top: 0rem;
+    text-align: center; /* Centrar el texto */
+}
+
+.parr2 {
+    margin-top: 0;
     font-style: italic;
     font-size: 1.52rem;
-  }
-  .button {
+    text-align: center; /* Centrar el texto */
+}
+
+.button {
     background-color: #9d4edd;
-    display: flex; /* Cambiado de flexbox a flex */
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 1.2rem;
     padding: 1rem;
     width: 15rem;
     height: auto;
     border-radius: 2rem;
-    transition: .3s;
-  }
-  
-  .button:hover {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.button:hover {
     background-color: #8b2fc9;
     transform: scaleY(1.1);
-  }
-  .enlace {
+}
+
+.enlace {
     font-family: "Chelsea Market", serif;
     font-weight: 400;
     text-decoration: none;
     margin: 0;
-    display: flex; /* Añadido para alinear SVG y texto */
-    align-items: center; /* Alinea verticalmente SVG y texto */
-    gap: 0.5rem; /* Espacio entre el SVG y el texto */
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     color: #f4effa;
     font-size: 1.6rem;
-  }
-  /* Animación para el titulo */
-  @-webkit-keyframes bounceInDown {
-    from, 60%, 75%, 90%, to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-  
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  /* Animación para el cuadro */
-  @-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-  
-    to {
-        opacity: 1;
-    }
-  }
-  
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-  
-    to {
-        opacity: 1;
-    }
-  }
-  
-  .fadeIn {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-  }
-  
-  .animatedCuadro {
-    -webkit-animation-duration: 3s;
-    animation-duration: 3s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  
-  /* Animación para el titulo */
-  @keyframes bounceInDown {
-    from, 60%, 75%, 90%, to {
-        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    }
-  
-    0% {
-        opacity: 0;
-        -webkit-transform: translate3d(0, -3000px, 0);
-        transform: translate3d(0, -3000px, 0);
-    }
-  
-    60% {
-        opacity: 1;
-        -webkit-transform: translate3d(0, 25px, 0);
-        transform: translate3d(0, 25px, 0);
-    }
-  
-    75% {
-        -webkit-transform: translate3d(0, -10px, 0);
-        transform: translate3d(0, -10px, 0);
-    }
-  
-    90% {
-        -webkit-transform: translate3d(0, 5px, 0);
-        transform: translate3d(0, 5px, 0);
-    }
-  
-    to {
-        -webkit-transform: translate3d(0, 0, 0);
-        transform: translate3d(0, 0, 0);
-    }
-  }
-  
-  .bounceInDown {
-    -webkit-animation-name: bounceInDown;
-    animation-name: bounceInDown;
-  }
-  
-  .animated {
-    -webkit-animation-duration: 2s;
-    animation-duration: 2s;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
-  }
-  
-  /* Media Queries para pantallas más grandes */
-  @media (min-width: 768px) {
-    .sombra {
-        width: 50rem; /* Restaurar el ancho original para pantallas grandes */
-        padding: 5rem; /* Restaurar el padding original para pantallas grandes */
-        margin: 0rem 10rem; /* Restaurar el margen original para pantallas grandes */
-    }
-  
-    .titulo {
-        font-size: 3rem; /* Restaurar el tamaño de fuente original para pantallas grandes */
-    }
-  
-    .separador {
-        width: 40rem; /* Restaurar el ancho original para pantallas grandes */
-    }
-  }
+}
 
-  /* Estilos de las cards. */
+/* Animaciones */
+@keyframes bounceInDown {
+    from,
+    60%,
+    75%,
+    90%,
+    to {
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+
+    0% {
+        opacity: 0;
+        transform: translate3d(0, -3000px, 0);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translate3d(0, 25px, 0);
+    }
+
+    75% {
+        transform: translate3d(0, -10px, 0);
+    }
+
+    90% {
+        transform: translate3d(0, 5px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bounceInDown {
+    animation-name: bounceInDown;
+}
+
+.animated {
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+}
+
+.animatedCuadro {
+    animation-duration: 3s;
+    animation-fill-mode: both;
+}
+
+/* Media Queries para pantallas más grandes (tablets y escritorio) */
+@media (min-width: 768px) {
+    .sombra {
+        width: 50rem; /* Ancho fijo para pantallas grandes */
+        padding: 5rem; /* Más padding para pantallas grandes */
+        margin: 0; /* Sin margen para pantallas grandes */
+    }
+
+    .titulo {
+        font-size: 3rem; /* Tamaño de fuente más grande para pantallas grandes */
+    }
+
+    .separador {
+        width: 40rem; /* Ancho fijo para pantallas grandes */
+    }
+}
+
+/* Estilos de las cards */
 .card-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* Centra las cards horizontalmente */
-    align-items: center; /* Centra las cards verticalmente */
-    max-width: 1000px; /* Ancho máximo del contenedor */
+    justify-content: center;
+    align-items: center;
+    max-width: 1000px;
     padding: 20px;
+    width: 100%; /* Asegura que el contenedor ocupe el 100% del ancho disponible */
 }
 
 .card {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: calc(100% - 40px); /* Ancho completo en móviles, menos el gap */
+    max-width: 300px; /* Ancho máximo para pantallas grandes */
     height: 200px;
     perspective: 1000px;
     cursor: pointer;
@@ -273,7 +230,6 @@ html {
 .card-front {
     font-family: "Chelsea Market", serif;
     font-weight: 400;
-    text-decoration: none;
     background-color: #caadff;
     transform: rotateY(0deg);
     color: #fff;
@@ -282,7 +238,6 @@ html {
 .card-back {
     font-family: "Chelsea Market", serif;
     font-weight: 400;
-    text-decoration: none;
     font-size: 1.35rem;
     background-color: #af99ff;
     transform: rotateY(180deg);
