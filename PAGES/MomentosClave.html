@@ -1,11 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="../CSS/normalize.css" />
+    <link rel="stylesheet" href="../CSS/styles_WhyYou.css" />
+    <!-- FUENTES. -->
+    <!-- FUENTE PARA TITULO-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik+Spray+Paint&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FUENTE PARA TEXTOS. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FUENTE PARA BOTONES. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Knewave&family=Road+Rage&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <main class="sombra animatedCuadro fadeIn">
+      <h2 class="titulo animated bounceInDown">¿Por qué tú?</h2>
+      <div class="separador"></div>
+      <br />
+      <div class="card-container">
+        <section class="card" onclick="flipCard(this)">
+          <div class="card-front">
+            <h2>Título de la Card 1</h2>
+          </div>
+          <div class="card-back">
+            <p>
+              Contenido de la card 1. Aquí puedes agregar más texto o elementos.
+            </p>
+          </div>
+        </section>
+        <section class="card" onclick="flipCard(this)">
+          <div class="card-front">
+            <h2>Título de la Card 2</h2>
+          </div>
+          <div class="card-back">
+            <p>
+              Contenido de la card 2. Aquí puedes agregar más texto o elementos.
+            </p>
+          </div>
+        </section>
+        <section class="card" onclick="flipCard(this)">
+          <div class="card-front">
+            <h2>Título de la Card 3</h2>
+          </div>
+          <div class="card-back">
+            <p>
+              Contenido de la card 3. Aquí puedes agregar más texto o elementos.
+            </p>
+          </div>
+        </section>
+        <section class="card" onclick="flipCard(this)">
+            <div class="card-front">
+              <h2>Título de la Card 4</h2>
+            </div>
+            <div class="card-back">
+              <p>
+                Contenido de la card 4. Aquí puedes agregar más texto o elementos.
+              </p>
+              <p>
+                Contenido de la card 4. Aquí puedes agregar más texto o elementos.
+              </p>
+            </div>
+          </section>
+      </div>
+      <!-- FIN DE LA CLASE card-front. -->
+      <div class="button">
+        <a href="main.html" class="enlace">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            width="24"
+            height="24"
+            stroke-width="2"
+          >
+            <path d="M5 12l14 0"></path>
+            <path d="M5 12l6 6"></path>
+            <path d="M5 12l6 -6"></path>
+          </svg>
+          <span>Regresar</span>
+        </a>
+      </div>
+    </main>
+
+    <script>
+      function flipCard(card) {
+        card.classList.toggle("flipped"); // Alterna la clase "flipped" al hacer clic
+      }
+    </script>
+  </body>
 </html>
