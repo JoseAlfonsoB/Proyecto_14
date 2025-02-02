@@ -1,37 +1,63 @@
 /* Estilo básico para el splash screen */
 body {
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #9d4edd; /* Fondo azul */
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    animation: fadeOut 12s forwards; /* Efecto de desvanecimiento */
-  }
-  h1 {
-    font-family: "Alkatra", serif;
-    font-weight: bold;
-    font-size: 50px;
-  }
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #9d4edd; /* Fondo morado */
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  animation: fadeOut 12s forwards; /* Efecto de desvanecimiento */
+}
 
+h1 {
+  font-family: "Alkatra", serif;
+  font-weight: bold;
+  font-size: 50px;
+  color: white; /* Asegura que el texto sea blanco */
+}
+
+.contenedor {
+  text-align: center;
+}
+
+#texto-animado {
+  font-size: 2.5em;
+  color: white; /* Texto blanco */
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid white; /* Cursor blanco */
+  animation: blink-cursor 1.3s steps(2, start) infinite;
+}
+/* Animación para el cursor parpadeante */
+@keyframes blink-cursor {
+  from,
+  to {
+    border-right-color: transparent; /* Cursor invisible */
+  }
+  50% {
+    border-right-color: white; /* Cursor visible */
+  }
+}
+
+.splash-container {
+  opacity: 1;
+  animation: fadeOut 12s forwards;
+}
+@media (max-width: 600px) {
   .splash-container {
-    opacity: 1;
-    animation: fadeOut 12s forwards;
+    padding: 60px;
   }
-  @media (max-width: 600px) {
-      .splash-container {
-        padding: 60px;
-      }
-  }
+}
 
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
+/* Animación para el desvanecimiento */
+/*@keyframes fadeOut {
+  0% {
+    opacity: 1;
   }
+  100% {
+    opacity: 0;
+  }
+}*/

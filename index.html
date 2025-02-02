@@ -15,14 +15,30 @@
   </head>
   <body>
     <div class="splash-container">
-      <h1>¿Cómo fue que me enamore de ti 🥰?</h1>
+      <div class="contenedor">
+        <h1 id="texto-animado"></h1>
+      </div>
     </div>
 
     <script>
-      // Redirige automáticamente después de 4 segundos
+      const text = "¿Cómo fue que me enamore de ti 🥰?";
+      const animatedText = document.getElementById("texto-animado");
+      let index = 0;
+
+      // Redirige automáticamente después de 6 segundos
       setTimeout(() => {
         window.location.href = "PAGES/Login.html"; // Cambia a la URL de tu página principal
       }, 6000);
+
+      function typeWriter() {
+        if (index < text.length) {
+          animatedText.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeWriter, 110); // Ajusta la velocidad de la animación.
+        }
+      }
+
+      typeWriter(); // Inicia la animación.
     </script>
   </body>
 </html>
