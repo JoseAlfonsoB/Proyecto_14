@@ -37,16 +37,19 @@ body {
   width: 90%; /* Ajuste para móviles */
   max-width: 50rem; /* Máximo ancho para pantallas grandes */
   height: auto;
+  display: grid;
+  place-items: center;
   border-radius: 2rem;
   padding: 2rem; /* Reducir padding para móviles */
   margin: 1rem; /* Reducir margen para móviles */
-  text-align: center;
   background-color: #fff;
 }
 
 .titulo {
+  font-family: "Rubik Spray Paint", serif;
+  font-weight: 400;
   color: #c8b1e4;
-  font-size: 2.5rem; /* Tamaño de fuente más pequeño para móviles */
+  font-size: 2.9rem; /* Tamaño de fuente más pequeño para móviles */
 }
 
 .separador {
@@ -55,6 +58,48 @@ body {
   margin: 0 auto; /* Centrar el separador */
 }
 
+.parrafo {
+  font-family: "Roboto Condensed", serif;
+  font-optical-sizing: auto;
+  font-weight: normal;
+  font-style: normal;
+  margin: 1rem;
+  margin-bottom: 0rem;
+  font-size: 1.6rem;
+}
+.parr2 {
+  margin-top: 0rem;
+  font-style: italic;
+  font-size: 1.52rem;
+}
+.button {
+  background-color: #9d4edd;
+  display: flex; /* Cambiado de flexbox a flex */
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+  margin-top: 1.2rem;
+  padding: 1rem;
+  width: 15rem;
+  height: auto;
+  border-radius: 2rem;
+  transition: .3s;
+}
+
+.button:hover {
+  background-color: #8b2fc9;
+  transform: scaleY(1.1);
+}
+.enlace {
+  font-family: "Chelsea Market", serif;
+  font-weight: 400;
+  text-decoration: none;
+  margin: 0;
+  display: flex; /* Añadido para alinear SVG y texto */
+  align-items: center; /* Alinea verticalmente SVG y texto */
+  gap: 0.5rem; /* Espacio entre el SVG y el texto */
+  color: #f4effa;
+  font-size: 1.6rem;
+}
 /* Animación para el titulo */
 @-webkit-keyframes bounceInDown {
   from, 60%, 75%, 90%, to {
