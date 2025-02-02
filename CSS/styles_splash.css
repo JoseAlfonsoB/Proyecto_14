@@ -1,4 +1,4 @@
-/* Estilo básico para el splash screen */
+/* Estilos base (mobile-first) */
 body {
   margin: 0;
   display: flex;
@@ -15,22 +15,26 @@ body {
 h1 {
   font-family: "Alkatra", serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 24px; /* Tamaño de fuente más pequeño para móviles */
   color: white; /* Asegura que el texto sea blanco */
+  margin: 0;
+  padding: 0;
 }
 
 .contenedor {
   text-align: center;
+  padding: 20px; /* Espaciado para móviles */
 }
 
 #texto-animado {
-  font-size: 2.5em;
+  font-size: 1.5em; /* Tamaño de fuente más pequeño para móviles */
   color: white; /* Texto blanco */
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid white; /* Cursor blanco */
   animation: blink-cursor 1.3s steps(2, start) infinite;
 }
+
 /* Animación para el cursor parpadeante */
 @keyframes blink-cursor {
   from,
@@ -46,18 +50,35 @@ h1 {
   opacity: 1;
   animation: fadeOut 12s forwards;
 }
-@media (max-width: 600px) {
-  .splash-container {
-    padding: 60px;
+
+/* Media queries para pantallas más grandes */
+
+/* Tabletas (≥768px) */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px; /* Tamaño de fuente más grande para tabletas */
+  }
+
+  #texto-animado {
+    font-size: 2em; /* Tamaño de fuente más grande para tabletas */
+  }
+
+  .contenedor {
+    padding: 40px; /* Más espaciado para tabletas */
   }
 }
 
-/* Animación para el desvanecimiento */
-/*@keyframes fadeOut {
-  0% {
-    opacity: 1;
+/* Escritorios (≥1024px) */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 50px; /* Tamaño de fuente más grande para escritorios */
   }
-  100% {
-    opacity: 0;
+
+  #texto-animado {
+    font-size: 2.5em; /* Tamaño de fuente más grande para escritorios */
   }
-}*/
+
+  .contenedor {
+    padding: 60px; /* Más espaciado para escritorios */
+  }
+}
