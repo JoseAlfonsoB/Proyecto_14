@@ -1,0 +1,101 @@
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Scroll snap */
+  .servicios,
+  .navegacion-principal,
+  .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: radial-gradient(circle at 29% 25%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 54%,transparent 54%, transparent 89%,transparent 89%, transparent 100%),radial-gradient(circle at 35% 35%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 2%,transparent 2%, transparent 48%,transparent 48%, transparent 100%),radial-gradient(circle at 47% 56%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 43%,transparent 43%, transparent 76%,transparent 76%, transparent 100%),radial-gradient(circle at 48% 84%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 64%,transparent 64%, transparent 84%,transparent 84%, transparent 100%),radial-gradient(circle at 31% 76%, hsla(280,0%,87%,0.1) 0%, hsla(280,0%,87%,0.1) 45%,transparent 45%, transparent 86%,transparent 86%, transparent 100%),linear-gradient(135deg, rgb(2, 39, 217),rgb(100, 100, 207));
+    min-height: 100vh; /* Asegura que el body tenga al menos el alto de la ventana */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla sin distorsionarse */
+  }
+  
+  .sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px #ced4da;
+    -moz-box-shadow: 0px 5px 15px 0px #ced4da;
+    box-shadow: 0px 5px 15px 0px #ced4da;
+    width: 90%; /* Ajuste para móviles */
+    max-width: 50rem; /* Máximo ancho para pantallas grandes */
+    height: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 2rem;
+    padding: 2rem; /* Reducir padding para móviles */
+    margin: 1rem; /* Reducir margen para móviles */
+    background-color: #fff;
+  }
+
+  .titulo {
+    font-family: "Rubik Spray Paint", serif;
+    font-weight: 400;
+    color: #c8b1e4;
+    font-size: 2.9rem; /* Tamaño de fuente más pequeño para móviles */
+  }
+  
+  .separador {
+    border-bottom: .2rem solid #ced4da;
+    width: 100%; /* Ajuste para móviles */
+    margin: 0 auto; /* Centrar el separador */
+  }
+
+    /* Estilos para los parrafos. */
+  .parrafo {
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+  }
+
+  /* Estilos del botón. */
+  .button {
+    background-color: #9d4edd;
+    display: flex; /* Cambiado de flexbox a flex */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 1.2rem;
+    padding: 1rem;
+    width: 15rem;
+    height: auto;
+    border-radius: 2rem;
+    transition: .3s;
+  }
+  
+  .button:hover {
+    background-color: #8b2fc9;
+    transform: scaleY(1.1);
+  }
+  .enlace {
+    font-family: "Chelsea Market", serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0;
+    display: flex; /* Añadido para alinear SVG y texto */
+    align-items: center; /* Alinea verticalmente SVG y texto */
+    gap: 0.5rem; /* Espacio entre el SVG y el texto */
+    color: #f4effa;
+    font-size: 1.6rem;
+  }
