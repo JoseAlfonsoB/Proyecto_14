@@ -1,9 +1,11 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #ffe1a8;
     height: 100vh;
+    margin: 0;
 }
 
 .flower {
@@ -388,3 +390,36 @@ h1 {
         opacity: 1;
     }
 }
+
+.button {
+    background-color: #f6bd60;
+    color: #fff3b0;
+    display: flex; /* Cambiado de flexbox a flex */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 12px;
+    padding: 10px;
+    width: 150px;
+    height: auto;
+    border-radius: 20px;
+    border: 3px solid #f2cc8f;
+    transition: .3s;
+  }
+  
+  .button:hover {
+    background-color: #f2cc8f;
+    border: 3px solid #f6bd60;
+    transform: scaleX(1.1);
+  }
+  .enlace {
+    font-family: "Chelsea Market", serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0;
+    display: flex; /* Añadido para alinear SVG y texto */
+    align-items: center; /* Alinea verticalmente SVG y texto */
+    gap: 0.5rem; /* Espacio entre el SVG y el texto */
+    color: #f4effa;
+    font-size: 1.6rem;
+  }
+  

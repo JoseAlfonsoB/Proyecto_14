@@ -1,0 +1,200 @@
+/* Globales */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y mandatory;
+  }
+  
+  /* Scroll snap */
+  .servicios,
+  .navegacion-principal,
+  .formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    font-size: 16px; /* 1rem = 10px */
+    font-family: "Krub", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='900' height='900' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%239C92AC' fill-opacity='0.44' fill-rule='evenodd'/%3E%3C/svg%3E");
+    min-height: 100vh; /* Asegura que el body tenga al menos el alto de la ventana */
+    background-repeat: no-repeat; /* Evita que el fondo se repita */
+    background-size: cover; /* Asegura que el fondo cubra toda la pantalla sin distorsionarse */
+  }
+  
+  .sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px #ced4da;
+    -moz-box-shadow: 0px 5px 15px 0px #ced4da;
+    box-shadow: 0px 5px 15px 0px #ced4da;
+    width: 90%; /* Ajuste para móviles */
+    max-width: 50rem; /* Máximo ancho para pantallas grandes */
+    height: auto;
+    display: grid;
+    place-items: center;
+    border-radius: 2rem;
+    padding: 2rem; /* Reducir padding para móviles */
+    margin: 1rem; /* Reducir margen para móviles */
+    background-color: #fff;
+  }
+  
+  .titulo {
+    font-family: "Rubik Spray Paint", serif;
+    font-weight: 400;
+    color: #c8b1e4;
+    font-size: 2.9rem; /* Tamaño de fuente más pequeño para móviles */
+  }
+  
+  .separador {
+    border-bottom: .2rem solid #ced4da;
+    width: 100%; /* Ajuste para móviles */
+    margin: 0 auto; /* Centrar el separador */
+  }
+  
+  .parrafo {
+    font-family: "Roboto Condensed", serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+    margin: 1rem;
+    margin-bottom: 0rem;
+    font-size: 1.6rem;
+  }
+  .parr2 {
+    margin-top: 0rem;
+    font-style: italic;
+    font-size: 1.52rem;
+  }
+  .button {
+    background-color: #9d4edd;
+    display: flex; /* Cambiado de flexbox a flex */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin-top: 1.2rem;
+    padding: 1rem;
+    width: 15rem;
+    height: auto;
+    border-radius: 2rem;
+    transition: .3s;
+  }
+  
+  .button:hover {
+    background-color: #8b2fc9;
+    transform: scaleY(1.1);
+  }
+  .enlace {
+    font-family: "Chelsea Market", serif;
+    font-weight: 400;
+    text-decoration: none;
+    margin: 0;
+    display: flex; /* Añadido para alinear SVG y texto */
+    align-items: center; /* Alinea verticalmente SVG y texto */
+    gap: 0.5rem; /* Espacio entre el SVG y el texto */
+    color: #f4effa;
+    font-size: 1.6rem;
+  }
+  
+  /* Animación para el cuadro */
+  @-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+  
+    to {
+        opacity: 1;
+    }
+  }
+  
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+  
+  .animatedCuadro {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+/* Animación para el titulo */
+@keyframes bounceInDown {
+    from, 60%, 75%, 90%, to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -3000px, 0);
+        transform: translate3d(0, -3000px, 0);
+    }
+  
+    60% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 25px, 0);
+        transform: translate3d(0, 25px, 0);
+    }
+  
+    75% {
+        -webkit-transform: translate3d(0, -10px, 0);
+        transform: translate3d(0, -10px, 0);
+    }
+  
+    90% {
+        -webkit-transform: translate3d(0, 5px, 0);
+        transform: translate3d(0, 5px, 0);
+    }
+  
+    to {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .bounceInDown {
+    -webkit-animation-name: bounceInDown;
+    animation-name: bounceInDown;
+  }
+  
+  .animated {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+  
+  /* Media Queries para pantallas más grandes */
+  @media (min-width: 768px) {
+    .sombra {
+        width: 50rem; /* Restaurar el ancho original para pantallas grandes */
+        padding: 5rem; /* Restaurar el padding original para pantallas grandes */
+        margin: 0rem 10rem; /* Restaurar el margen original para pantallas grandes */
+    }
+  
+    .titulo {
+        font-size: 3rem; /* Restaurar el tamaño de fuente original para pantallas grandes */
+    }
+  
+    .separador {
+        width: 40rem; /* Restaurar el ancho original para pantallas grandes */
+    }
+  }
