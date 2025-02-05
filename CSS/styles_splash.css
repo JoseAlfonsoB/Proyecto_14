@@ -28,25 +28,36 @@ h1 {
 }
 
 #texto-animado {
-  font-size: 1.5em; /* Tamaño de fuente más pequeño para móviles */
+  font-size: 1.2em; /* Tamaño de fuente más pequeño para móviles */
   color: white; /* Texto blanco */
-  white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid white; /* Cursor blanco */
-  animation: blink-cursor 1.3s steps(2, start) infinite;
+  /* SE DESECHARA ESTA IDEA border-right: 3px solid white; // Cursor blanco
+  animation: blink-cursor 1.3s steps(2, start) infinite; */
+  word-wrap: break-word; /* Asegura que las palabras largas se dividan */
 }
 
-/* Animación para el cursor parpadeante */
+@media (max-width: 480px) {
+  #texto-animado {
+    max-width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    font-size: 1em; /* Tamaño de fuente aún más pequeño para móviles */
+    height: auto;
+    margin: auto;
+    padding: 0 10px; /* Añade un poco de padding para evitar que el texto toque los bordes */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
+  }
+}
+/* NO SE HARA USO DE LA IDEA DEL PUNTERO. 
+ Animación para el cursor parpadeante 
 @keyframes blink-cursor {
   from,
   to {
-    border-right-color: transparent; /* Cursor invisible */
+    border-right-color: transparent; // Cursor invisible 
   }
   50% {
-    border-right-color: white; /* Cursor visible */
+    border-right-color: white; // Cursor visible 
   }
 }
-
+*/
 .splash-container {
   opacity: 1;
   animation: fadeOut 12s forwards;

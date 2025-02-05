@@ -108,7 +108,8 @@ html {
       margin-top: 8rem;
     }
     .regisFecha {
-      width: 20rem;
+      width: 15rem;
+      padding: auto;
     }
   }
 

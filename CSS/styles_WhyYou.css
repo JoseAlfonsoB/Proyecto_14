@@ -206,7 +206,7 @@ body {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: calc(100% - 40px); /* Ancho completo en móviles, menos el gap */
+    width: calc(100% - 10px); /* Ancho completo en móviles, menos el gap */
     max-width: 300px; /* Ancho máximo para pantallas grandes */
     height: 200px;
     perspective: 1000px;
