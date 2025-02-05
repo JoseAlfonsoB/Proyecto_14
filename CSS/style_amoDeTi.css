@@ -99,3 +99,10 @@ html {
     color: #f4effa;
     font-size: 1.6rem;
   }
+
+  li {
+    font-family: "Roboto Condensed", serif;
+    margin-right: 1.2rem;
+    margin-left: 1.2rem;
+  }
+  /* ANIMACIONES. */
