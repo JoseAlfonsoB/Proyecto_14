@@ -241,11 +241,13 @@ body {
 .card-back {
     font-family: "Chelsea Market", serif;
     font-weight: 400;
-    font-size: 1.35rem;
+    font-size: 1.6rem;
     background-color: #af99ff;
     transform: rotateY(180deg);
+    color: #fff;
 }
 
 .card.flipped {
     transform: rotateY(180deg);
 }
+/* ANIMACIONES PARA EL CUADRO. */
