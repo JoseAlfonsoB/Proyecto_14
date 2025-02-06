@@ -26,6 +26,8 @@ body {
     min-height: 100vh; /* Asegura que el body tenga al menos el alto de la ventana */
     background-repeat: no-repeat; /* Evita que el fondo se repita */
     background-size: cover; /* Asegura que el fondo cubra toda la pantalla sin distorsionarse */
+    background-attachment: fixed; /* Fija el fondo para que no se mueva al hacer scroll */
+    background-color: #4e148c; /* Color de respaldo en caso de que la imagen no se cargue */
     overflow: auto; /* Asegura que el scroll funcione correctamente */    
 }
 
