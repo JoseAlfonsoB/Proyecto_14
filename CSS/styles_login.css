@@ -90,8 +90,8 @@ html {
     -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
     -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
     box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 1);
-    border-radius: 2rem;
-    background-color: #f7f6c5;
+    border-radius: 3rem;
+    background-color: #f9dc5c;
     /*background-color: transparent;
     backdrop-filter: blur(.4rem);*/
     border: .2rem solid white;
@@ -200,5 +200,5 @@ html {
     font-family: "Poppins", serif;
     font-weight: 500;
     text-transform: uppercase;
-    color: #240046;
+    color: #333533;
   }
